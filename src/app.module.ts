@@ -4,6 +4,10 @@ import { UsuariosModule } from './usuarios/usuarios.module';
 import { RolesModule } from './roles/roles.module';
 import { AutenticacionModule } from './autenticacion/autenticacion.module';
 
+import { ProductosController } from './productos/productos.controller';
+import { ProductosService } from './productos/productos.service';
+import { ProductosModule } from './productos/productos.module';
+
 @Module({
   imports: [
     SequelizeModule.forRoot({
@@ -19,6 +23,11 @@ import { AutenticacionModule } from './autenticacion/autenticacion.module';
     UsuariosModule,
     RolesModule,
     AutenticacionModule,
+    ProductosModule,
+    
   ],
+  controllers: [],
+  providers: []
+  
 })
 export class AppModule {}

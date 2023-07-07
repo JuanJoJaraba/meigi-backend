@@ -22,7 +22,7 @@ export class UsuariosService {
             apellidos: dto.apellidos,
             correo: dto.correo,
             contrena: md5(dto.contrena),
-            direccion: dto.direccion,
+            repecontrena: md5(dto.repecontrena),
         })
     }
 
@@ -44,6 +44,7 @@ export class UsuariosService {
         const payload = { sub: usuario.nombres, correo: usuario.correo, rol: "ADMIN" };
         return {
             access_token: await this.jwtService.signAsync(payload),
+            nombre: usuario.nombres
         };
     }
 

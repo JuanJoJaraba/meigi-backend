@@ -11,7 +11,7 @@ export class Usuario extends Model {
     @Column
     contrena: string
     @Column
-    direccion: string
+    repecontrena: string
     @Default(1)
     @Column
     rolId: number
